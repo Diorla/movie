@@ -56,17 +56,25 @@ function App() {
     <Container>
       <h1>Rate your favorite movies</h1>
       <Form>
-        <TextInput
-          value={movie}
-          onChange={(e) => setMovie(e.target.value)}
-          placeholder="Title of movie"
-          label="Movie"
-          list="browsers"
-          required
-        />
-        <datalist id="browsers">
-          {data.map((item: { title: string }) => (
-            <option value={item.title} key={item.title} />
+        <div className="form-group">
+          <label className="form-label" htmlFor="formBasicEmail">
+            Movie
+          </label>
+          <input
+            type="text"
+            id="formBasicEmail"
+            className="form-control"
+            data-slug-id="movie"
+            data-category="user-data"
+            value={movie}
+            onChange={(e) => setMovie(e.target.value)}
+            placeholder="Title of movie"
+            list="myMovies"
+          />
+        </div>
+        <datalist id="myMovies">
+          {data.map((item: { title: string }, idx: number) => (
+            <option value={item.title} key={idx} />
           ))}
         </datalist>
         <RatingInput
