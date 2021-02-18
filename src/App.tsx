@@ -24,7 +24,12 @@ function App() {
     size: number,
     newRating: number
   ) => {
-    return (initialRating * size + newRating) / (size + 1);
+    console.log({
+      initialRating,
+      size,
+      newRating,
+    });
+    return (initialRating * size + Number(newRating)) / (Number(size) + 1);
   };
 
   const handleSubmit = () => {
