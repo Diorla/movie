@@ -20,7 +20,7 @@ export default function TextInput({
       <Form.Label>{label}</Form.Label>
       <Form.Control
         type="number"
-        min={0}
+        min={1}
         max={5}
         placeholder={placeholder}
         value={value}

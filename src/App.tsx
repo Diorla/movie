@@ -10,7 +10,7 @@ import { Form } from "react-bootstrap";
 
 function App() {
   const [movie, setMovie] = useState("");
-  const [rating, setRating] = useState(0);
+  const [rating, setRating] = useState(1);
   const [duration, setDuration] = useState("2:45");
   const [data, setData] = useState([] as any);
   const [search, setSearch] = useState("");
