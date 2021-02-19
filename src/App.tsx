@@ -49,7 +49,11 @@ function App() {
         },
         ...data.slice(index + 1),
       ]);
-   } else setData([...data, { title: movie, rating, duration, votes: 1 }]);
+    } else
+      setData([
+        { title: movie, rating: Number(rating), duration, votes: 1 },
+        ...data,
+      ]);
   };
 
   return (

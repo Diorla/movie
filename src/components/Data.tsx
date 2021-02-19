@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Table from "react-bootstrap/Table";
 
 type datum = {
@@ -34,7 +33,7 @@ export default function Data({ data, filter }: TableProps) {
               <tr key={idx}>
                 <td>{item.title}</td>
                 <td>{item.duration}</td>
-                <td>{item.rating.toFixed(2)}</td>
+                <td>{(item.rating).toFixed(2)}</td>
               </tr>
             )
           )}
